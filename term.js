@@ -289,6 +289,8 @@ Term.prototype.move_textarea = function()
     this.textarea_el.style.zIndex = 1000;
 }
 
+let lastevent = []
+
 Term.prototype.refresh = function(ymin, ymax)
 {
     var el, y, line, outline, c, w, i, j, cx, attr, last_attr, fg, bg, y1;
@@ -451,12 +453,21 @@ Term.prototype.refresh = function(ymin, ymax)
         
         if (outline == "&nbsp;") {
             const eventinfo = ["newline", y]
-            console.log(eventinfo)
-            window.dispatchEvent(new CustomEvent('BrowserEvent', { detail: eventinfo }));
+           
+
+            if (lastevent != eventinfo) {
+                 console.log(eventinfo)
+                 window.dispatchEvent(new CustomEvent('BrowserEvent', { detail: eventinfo }));
+            }
+           
         } else {
             const eventinfo = ["output", output, y]
-            console.log(eventinfo)
-            window.dispatchEvent(new CustomEvent('BrowserEvent', { detail: eventinfo }));
+           
+            
+                 if (lastevent != eventinfo) {
+                      console.log(eventinfo)
+                 window.dispatchEvent(new CustomEvent('BrowserEvent', { detail: eventinfo }));
+            }
         }
           
     
