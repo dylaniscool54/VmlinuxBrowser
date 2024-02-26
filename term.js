@@ -451,21 +451,14 @@ Term.prototype.refresh = function(ymin, ymax)
         let output = textContent.trim()
         const orio = output
         
-        if (outline == "&nbsp;") {
-            const eventinfo = ["newline", y]
-           
-
-            if (lastevent != eventinfo) {
-                 console.log(eventinfo)
-                 window.dispatchEvent(new CustomEvent('BrowserEvent', { detail: eventinfo }));
-            }
-           
-        } else {
+    
+        if {
             const eventinfo = ["output", output, y]
            
             
                  if (lastevent != eventinfo) {
                       console.log(eventinfo)
+                     lastevent = eventinfo
                  window.dispatchEvent(new CustomEvent('BrowserEvent', { detail: eventinfo }));
             }
         }
