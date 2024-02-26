@@ -471,7 +471,7 @@ Term.prototype.refresh = function(ymin, ymax)
 
 
         if (outline == "&nbsp;") {
-            const eventinfo = ["newline"]
+            const eventinfo = ["newline", y]
             console.log(eventinfo)
             window.dispatchEvent(new CustomEvent('BrowserEvent', { detail: eventinfo }));
         } else {
