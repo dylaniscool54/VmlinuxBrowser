@@ -448,28 +448,7 @@ Term.prototype.refresh = function(ymin, ymax)
         var textContent = tempDiv.textContent || tempDiv.innerText;
         let output = textContent.trim()
         const orio = output
-
-    
-        const outputreps = {
-            "TG9hZGluZy4uLg==": "Loading Operating System...",
-            "V2VsY29tZaB0b6BKUy9MaW51eKAoaTU4Nik=": "Welcome to Linux 3.12.0",
-            "VXNloCd2ZmxvZ2luoHVzZXJuYW1lJ6B0b6Bjb25uZWN0oHRvoHlvdXKgYWNjb3VudC4=": "",
-            "WW91oGNhbqBjcmVhdGWgYaBuZXegYWNjb3VudKBhdKBodHRwczovL3Zmc3luYy5vcmcvc2lnbnVwoC4=": "",
-            "VXNloCdleHBvcnRfZmlsZaBmaWxlbmFtZSegdG+gZXhwb3J0oGGgZmlsZaB0b6B5b3VyoGNvbXB1dGVyLg==": "",
-            "SW1wb3J0ZWSgZmlsZXOgYXJloHdyaXR0ZW6gdG+gdGhloGhvbWWgZGlyZWN0b3J5Lg==": "",
-        }
-
-        if (output.length > 0) {
-            
-            console.log(btoa(output))
-
-            if (outputreps[btoa(output)]) {
-                output = outputreps[btoa(output)]
-            }
-            
-        }
-
-
+        
         if (outline == "&nbsp;") {
             const eventinfo = ["newline", y]
             console.log(eventinfo)
