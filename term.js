@@ -455,9 +455,12 @@ Term.prototype.refresh = function(ymin, ymax)
         if (output != "&nbsp;") {
             const eventinfo = ["output", output, y]
            
-            
-                 if (lastevent != eventinfo) {
+           
+    
+                 if (lastevent[1] != eventinfo[1] && lastevent[2] != eventinfo[2]) {
+
                       console.log(eventinfo)
+                      console.log(lastevent)
                      lastevent = eventinfo
                  window.dispatchEvent(new CustomEvent('BrowserEvent', { detail: eventinfo }));
             }
