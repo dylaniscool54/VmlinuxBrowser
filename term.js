@@ -452,7 +452,7 @@ Term.prototype.refresh = function(ymin, ymax)
         const orio = output
         
     
-        if {
+        if (output != "&nbsp;") {
             const eventinfo = ["output", output, y]
            
             
