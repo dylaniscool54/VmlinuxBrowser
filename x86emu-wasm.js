@@ -2200,9 +2200,7 @@ function _emscripten_async_wget3_data(url, request, user, password, post_data, p
     if (_url.includes("kernel-x86.bin")) {
         _url = "https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/e9039441-905e-411f-9dea-c295c46e1a08/kernel-x86.bin"
     }
-
-    _url = "https://corsproxy.io/?" + _url
-
+    
     var _request = Pointer_stringify(request);
     var _user;
     var _password;
