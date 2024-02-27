@@ -457,7 +457,7 @@ Term.prototype.refresh = function(ymin, ymax)
            
            
     
-                 if (lastevent[1] != eventinfo[1] && lastevent[2] != eventinfo[2]) {
+                 if (lastevent[1] != eventinfo[1] || lastevent[2] != eventinfo[2]) {
 
                       console.log(eventinfo)
                       console.log(lastevent)
